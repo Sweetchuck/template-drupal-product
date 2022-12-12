@@ -1,0 +1,5 @@
+
+services:
+  sweetchuck.behat.theme_detector:
+    class: 'Sweetchuck\DrupalTestTraits\Core\Behat\ThemeDetector'
+    public: true

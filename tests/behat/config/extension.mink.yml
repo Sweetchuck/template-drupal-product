@@ -1,0 +1,15 @@
+
+default:
+  extensions:
+    Drupal\MinkExtension:
+      ajax_timeout: 5
+      files_path: '%paths.base%/tests/behat/media'
+      base_url: 'http://template-drupal-product-10.sweetchuck.localhost'
+      browser_name: 'chrome'
+      default_session: 'browserChrome'
+      javascript_session: 'browserChrome'
+      sessions:
+        default:
+          chrome:
+            api_url: 'http://127.0.0.1:9222'
+            validate_certificate: false

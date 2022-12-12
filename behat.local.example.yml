@@ -1,0 +1,9 @@
+default:
+  extensions:
+    Drupal\MinkExtension:
+      base_url: 'https://template-drupal-product-10.sweetchuck.ddev'
+      sessions:
+        browserChrome:
+          chrome:
+            validate_certificate: false
+            api_url: 'http://chrome:9222'

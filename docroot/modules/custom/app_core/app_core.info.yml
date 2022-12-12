@@ -1,0 +1,7 @@
+type: 'module'
+package: 'App'
+name: 'App - Core'
+description: 'Basic functions'
+core_version_requirement: '^10'
+#dependencies:
+#  - 'drupal:migrate'

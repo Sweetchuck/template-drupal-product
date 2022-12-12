@@ -1,0 +1,34 @@
+
+default:
+  extensions:
+    NuvoleWeb\Drupal\DrupalExtension:
+      drush:
+        alias: 'self'
+      drupal:
+        drupal_root: '%paths.base%/docroot/'
+      blackbox: ~
+      api_driver: 'drupal'
+      services: './tests/behat/services.yml'
+      text:
+        username_field: 'name'
+        password_field: 'pass'
+      selectors:
+        message_selector: >-
+          .alert-wrapper,
+          .messages
+
+        success_message_selector: >-
+          .alert-wrapper > .alert-success > .alert-content,
+          .messages.messages--status .messages__list > messages__item
+        info_message_selector: >-
+          .alert-wrapper > .alert-info > .alert-content,
+          .messages.messages--info .messages__list > messages__item
+        warning_message_selector: >-
+          .alert-wrapper > .alert-warning > .alert-content,
+          .messages.messages--warning .messages__list > messages__item
+        error_message_selector: >-
+          .alert-wrapper > .alert-danger > .alert-content,
+          .messages.messages--error .messages__list > messages__item
+
+        drupal.core.vertical_tabs.tab_label__appb: 'xpath: //ul[@class="vertical-tabs__menu"]/li/a/strong[text() = "{{ tabLabel }}"]'
+        drupal.core.menu.links__appf: 'xpath: //nav[@role="navigation"]/*[text() = "{{ menuLabel }}"]/parent::*/ul[contains(@class, " menu-links ")]//a/span[@class="link-text"]'

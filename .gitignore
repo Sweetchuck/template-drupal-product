@@ -1,0 +1,99 @@
+## Common place for all tooling to put reports in.
+/reports/
+
+
+## Composer.
+/vendor/
+/docroot/core/
+/docroot/libraries/
+/docroot/modules/contrib/
+/docroot/profiles/contrib/
+/docroot/themes/contrib/
+
+/sweetchuck-template-drupal-product-*.tar
+/sweetchuck-template-drupal-product-*.tar.gz
+/sweetchuck-template-drupal-product-*.tar.bz2
+/sweetchuck-template-drupal-product-*.zip
+
+
+## Composer Suite.
+/composer.*.json
+/composer.*.lock
+
+
+## drupal/core - common.
+/docroot/sites/sites.php
+/docroot/autoload.php
+/docroot/index.php
+/docroot/robots.txt
+/docroot/update.php
+
+
+## drupal/core - sites.
+/docroot/sites/simpletest/
+/sites/simpletest/
+
+/docroot/sites/*/files/
+/docroot/sites/*/settings.local.php
+/docroot/sites/*/local.services.yml
+
+/sites/*/backup/
+/sites/*/php_storage/
+/sites/*/private/
+/sites/*/temporary/
+/sites/*/translations/*
+!/sites/*/translations/app-*.po
+/sites/*/hash_salt.txt
+
+
+## drush/drush.
+/drush/Commands/contrib/
+/drush/drush.local.yml
+
+
+## PHP Code Sniffer.
+/phpcs.xml
+
+
+## PHPUnit.
+/phpunit.xml
+/.phpunit.result.cache
+
+
+## Behat.
+/behat.local.yml
+
+
+## Frontend.
+/docroot/profiles/custom/*/node_modules/
+/docroot/profiles/custom/**/*.css.map
+/docroot/profiles/custom/**/*.js.map
+
+/docroot/modules/custom/*/node_modules/
+/docroot/modules/custom/**/*.css.map
+/docroot/modules/custom/**/*.js.map
+
+/docroot/themes/custom/*/node_modules/
+/docroot/themes/custom/**/*.css.map
+/docroot/themes/custom/**/*.js.map
+
+
+## Robo.
+/RoboFileLocal.php
+/robo.yml
+
+
+## RunTimeEnvironment - DDev.
+#/.ddev/.env
+#/.ddev/config.local.yaml
+/docroot/sites/*/settings.ddev.php
+/docroot/sites/*/ddev.services.yml
+/drush/drush.ddev.yml
+/behat.ddev.yml
+
+
+## RunTimeEnvironment - Localhost.
+/docroot/sites/*/settings.host.php
+/docroot/sites/*/host.services.yml
+/drush/drush.host.yml
+/behat.host.yml

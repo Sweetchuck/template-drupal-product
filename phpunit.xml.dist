@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+  bootstrap="docroot/core/tests/bootstrap.php"
+  colors="true"
+  beStrictAboutOutputDuringTests="true"
+  beStrictAboutChangesToGlobalState="true">
+
+  <php>
+    <ini name="memory_limit" value="-1"/>
+    <ini name="error_reporting" value="32767"/>
+
+    <!--<env name="DTT_BASE_URL" value="https://template-drupal-product-10.sweetchuck.ddev" />-->
+    <!--<env name="DTT_API_URL" value="http://chrome:9222" />-->
+    <env name="DTT_SCREENSHOT_REPORT_DIRECTORY" value="../reports/human/functional-javascript" />
+
+    <!--<env name="SIMPLETEST_BASE_URL" value="https://template-drupal-product-10.sweetchuck.ddev" />-->
+    <!--<env name="SIMPLETEST_DB" value="mysql://root:root@db:3306/app__default" />-->
+
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="./reports/human/browser_output" />
+    <!--<env name="BROWSERTEST_OUTPUT_BASE_URL" value="https://template-drupal-product-10.sweetchuck.ddev" />-->
+
+    <env name="SYMFONY_DEPRECATIONS_HELPER" value="/Drupal\\app(p|b|f|_.+?)\\/" />
+
+    <!--<env name="MINK_DRIVER_CLASS" value="Drupal\FunctionalJavascriptTests\DrupalSelenium2Driver" />-->
+    <!--<env name="MINK_DRIVER_ARGS" value='["chrome", null, "http://chrome:4444/wd/hub"]' />-->
+    <!--<env name="MINK_DRIVER_ARGS" value='["opera", null, "http://chrome:4444/wd/hub"]' />-->
+    <!--<env name="MINK_DRIVER_ARGS_WEBDRIVER" value='["firefox", null, "http://chrome:4444/wd/hub"]'/>-->
+  </php>
+
+  <!--<listeners>-->
+  <!--  <listener class="\Drupal\Tests\Listeners\DrupalListener"/>-->
+  <!--  <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>-->
+  <!--</listeners>-->
+
+  <testsuites>
+    <testsuite name="unit">
+      <directory>./docroot/profiles/custom/*/tests/src/Unit/</directory>
+      <directory>./docroot/modules/custom/*/tests/src/Unit/</directory>
+      <directory>./docroot/themes/custom/*/tests/src/Unit/</directory>
+      <directory>./tests/src/Unit/</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging>
+    <testdoxHtml outputFile="reports/human/junit/phpunit.html"/>
+    <junit outputFile="reports/machine/junit/phpunit.xml"/>
+  </logging>
+
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory>./docroot/profiles/custom/</directory>
+      <directory>./docroot/modules/custom/</directory>
+      <directory>./docroot/themes/custom/</directory>
+      <directory>./drush/Commands/custom/</directory>
+    </include>
+
+    <exclude>
+      <directory>./docroot/profiles/custom/*/tests/</directory>
+      <directory>./docroot/profiles/custom/*/node_modules/</directory>
+      <directory>./docroot/modules/custom/*/tests/</directory>
+      <directory>./docroot/modules/custom/*/node_modules/</directory>
+      <directory>./docroot/themes/custom/*/tests/</directory>
+      <directory>./docroot/themes/custom/*/node_modules/</directory>
+    </exclude>
+
+    <report>
+      <clover outputFile="reports/machine/coverage/phpunit.xml"/>
+      <html outputDirectory="reports/human/coverage/html"/>
+      <text outputFile="php://stdout"/>
+    </report>
+  </coverage>
+</phpunit>

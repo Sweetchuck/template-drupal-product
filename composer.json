@@ -1,0 +1,412 @@
+{
+    "type": "project",
+    "name": "sweetchuck/template-drupal-product",
+    "description": "@todo project description",
+    "keywords": [
+        "drupal",
+        "project-template"
+    ],
+    "authors": [
+        {
+            "name": "Andor",
+            "role": "Maintainer",
+            "homepage": "https://github.com/Sweetchuck"
+        }
+    ],
+    "homepage": "https://github.com/Sweetchuck/template-drupal-product",
+    "support": {
+        "source": "https://github.com/Sweetchuck/template-drupal-product",
+        "issues": "https://github.com/Sweetchuck/template-drupal-product/issues"
+    },
+    "license": "LGPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true,
+            "sweetchuck/git-hooks": true
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "repositories": {
+        "nuvoleweb/drupal-behat": {
+            "type": "github",
+            "url": "https://github.com/albeorte96/drupal-behat.git"
+        },
+        "drupal/marvin": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin.git"
+        },
+        "drupal/marvin_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_product.git"
+        },
+        "drupal/marvin_behat": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_behat.git"
+        },
+        "drupal/marvin_behat_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_behat_product.git"
+        },
+        "drupal/marvin_composer": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_composer.git"
+        },
+        "drupal/marvin_composer_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_composer_product.git"
+        },
+        "drupal/marvin_git": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_git.git"
+        },
+        "drupal/marvin_git_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_git_product.git"
+        },
+        "drupal/marvin_phpcs": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpcs.git"
+        },
+        "drupal/marvin_phpcs_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpcs_product.git"
+        },
+        "drupal/marvin_phplint": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phplint.git"
+        },
+        "drupal/marvin_phplint_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phplint_product.git"
+        },
+        "drupal/marvin_phpstan": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpstan.git"
+        },
+        "drupal/marvin_phpstan_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpstan_product.git"
+        },
+        "drupal/marvin_phpunit": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpunit.git"
+        },
+        "drupal/marvin_phpunit_product": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin_phpunit_product.git"
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "cweagans/composer-patches": "^2.0",
+        "drupal/admin_toolbar": "^3.3",
+        "drupal/core-composer-scaffold": "^10.0",
+        "drupal/core-recommended": "^10.0",
+        "drush/drush": "^12.0",
+        "oomphinc/composer-installers-extender": "^2.0"
+    },
+    "require-dev": {
+        "behat/mink": "^1.0",
+        "consolidation/robo": "^4.0",
+        "dmore/behat-chrome-extension": "^1.0",
+        "drupal/devel": "^5.1",
+        "drupal/marvin": "3.x-dev",
+        "drupal/marvin_behat": "2.x-dev",
+        "drupal/marvin_behat_product": "2.x-dev",
+        "drupal/marvin_composer": "2.x-dev",
+        "drupal/marvin_composer_product": "2.x-dev",
+        "drupal/marvin_git": "2.x-dev",
+        "drupal/marvin_git_product": "2.x-dev",
+        "drupal/marvin_phpcs": "2.x-dev",
+        "drupal/marvin_phpcs_product": "2.x-dev",
+        "drupal/marvin_phplint": "2.x-dev",
+        "drupal/marvin_phplint_product": "2.x-dev",
+        "drupal/marvin_phpstan": "2.x-dev",
+        "drupal/marvin_phpstan_product": "2.x-dev",
+        "drupal/marvin_phpunit": "2.x-dev",
+        "drupal/marvin_phpunit_product": "2.x-dev",
+        "drupal/marvin_product": "3.x-dev",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
+        "kint-php/kint": "^5.0",
+        "mikey179/vfsstream": "^1.0",
+        "nuvoleweb/drupal-behat": "dev-feature/Drupal-10-compatibility",
+        "nuvoleweb/robo-config": "^3.0",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7",
+        "sweetchuck/dtt-core": "10.x-dev",
+        "symfony/phpunit-bridge": "^6.2",
+        "weitzman/drupal-test-traits": "^2.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sweetchuck\\TemplateDrupalProduct\\Tests\\": "tests/src/",
+            "Drush\\Commands\\app\\": "drush/Commands/custom/app/"
+        }
+    },
+    "scripts": {
+        "clean": [
+            "@clean:backend",
+            "@clean:frontend",
+            "@clean:translations"
+        ],
+        "clean:backend": [
+            "rm -rf vendor/",
+            "rm -rf docroot/core/ docroot/modules/contrib/ docroot/profiles/contrib/ docroot/themes/contrib/ docroot/libraries/",
+            "rm -rf drush/Commands/contrib/"
+        ],
+        "clean:frontend": [
+            "rm -rf docroot/themes/custom/*/node_modules/",
+            "rm -rf docroot/themes/custom/*/bootstrap/",
+            "rm -rf docroot/themes/custom/*/css/",
+            "rm -rf docroot/themes/custom/*/dist/"
+        ],
+        "clean:translations": [
+            "git clean -X -f -- sites/all/translations"
+        ],
+        "reset": [
+            "@reset:cache",
+            "@reset:files",
+            "@reset:db"
+        ],
+        "reset:cache": [
+            "drush --ansi --config=drush --yes @app.local cache:rebuild || true"
+        ],
+        "reset:files": [
+            "rm -rf docroot/sites/*/files/*",
+            "rm -rf sites/*/php_storage/twig/*",
+            "rm -rf sites/*/private/*",
+            "rm -rf sites/*/temporary/*"
+        ],
+        "reset:db": [
+            "drush --ansi --config=drush --yes @app.local sql:drop"
+        ],
+        "site:install:local:default": [
+            "@reset",
+            "drush --ansi --config=drush @app.local site:install appp --existing-config --yes",
+            "drush --ansi --config=drush @app.local config-split:import local --yes",
+            "drush --ansi --config=drush @app.local marvin:toggle-modules --define=marvin.environment=local -vvv",
+            "drush --ansi --config=drush @app.local marvin:migrate default"
+        ],
+        "site:install:local:dummy": [
+            "@reset",
+            "drush --ansi --config=drush @app.local site:install appp --existing-config --marvin-migrate='' --yes",
+            "drush --ansi --config=drush @app.local config-split:import local --yes",
+            "drush --ansi --config=drush @app.local marvin:toggle-modules --define=marvin.environment=local -vvv",
+            "drush --ansi --config=drush @app.local marvin:migrate dummy"
+        ],
+        "site:install:prod:default": [
+            "@reset",
+            "drush --ansi --config=drush @app.local site:install appp --existing-config --yes"
+        ],
+        "site:install:prod:dummy": [
+            "@reset",
+            "drush --ansi --config=drush @app.local site:install appp --existing-config --yes"
+        ]
+    },
+    "scripts-descriptions": {
+        "clean": "Combines <comment>@clean:backend</comment> and <comment>@clean:frontend</comment>",
+        "clean:backend": "Deletes all backend related third-party and generated codes",
+        "clean:frontend": "Deletes all frontend related third-party and generated codes",
+        "clean:translations": "Deletes all third-party *.po files",
+        "reset": "Combines <fg=yellow>@reset:search</>, <fg=red>@reset:files</> and <fg=red>@reset:db</>",
+        "reset:files": "<fg=red>Deletes</> all the files in the <info>public</info> and the <info>private</info> directories.",
+        "reset:db": "<fg=red>Drops</> all the table in the <info>default database</info>.",
+        "site:install:local:default": "Runs <info>`drush site:install`</info>; Toggle modules for <info>local</info> environment; Import <info>local</info> config split; Migrates <info>default</info> contents",
+        "site:install:local:dummy": "Runs <info>`drush site:install`</info>; Toggle modules for <info>local</info> environment; Import <info>local</info> config split; Migrates <info>dummy</info> contents",
+        "site:install:prod:default": "Runs <info>`drush site:install`</info>; Toggle modules for <info>prod</info> environment; Migrates <info>default</info> contents",
+        "site:install:prod:dummy": "Runs <info>`drush site:install`</info>; Toggle modules for <info>prod</info> environment; Migrates <info>dummy</info> contents"
+    },
+    "extra": {
+        "patches": {
+            "drupal/core": [
+                {
+                    "description": "PoStreamReader::getSeek",
+                    "url": "https://www.drupal.org/files/issues/2023-02-20/drupal-po_stream_reader_seek-3126929-45.patch",
+                    "sha256": "b39da0e1ee6a2eff1deaf5f2a3532d7dd09489ce58e2f1838910d6d6a9397f6f",
+                    "extra": {
+                        "issue-tracker-url": "https://www.drupal.org/project/drupal/issues/3126929"
+                    }
+                }
+            ],
+            "drupal/drupal-extension": [
+                {
+                    "description": "Behat config schema - extendable selectors and text",
+                    "url": "https://patch-diff.githubusercontent.com/raw/jhedstrom/drupalextension/pull/640.patch",
+                    "sha256": "0c6759fe79625b3c0893418cacef8a6c0bde5256207efcc928a772aaa974a156",
+                    "extra": {
+                        "issue-tracker-url": "https://github.com/jhedstrom/drupalextension/issues/493"
+                    }
+                }
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/libraries/slick": [
+                "npm-asset/slick-carousel"
+            ],
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./docroot"
+            },
+            "file-mapping": {
+                "[web-root]/modules/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/modules/README.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/modules/README.txt": {
+                    "mode": "skip"
+                },
+
+                "[web-root]/profiles/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/profiles/README.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/profiles/README.txt": {
+                    "mode": "skip"
+                },
+
+                "[web-root]/themes/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/themes/README.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/themes/README.txt": {
+                    "mode": "skip"
+                },
+
+                "[web-root]/sites/default/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/default/default.services.yml": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/default/default.settings.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/default/example.settings.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/example.settings.local.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/example.sites.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/development.services.yml": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/README.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/README.txt": {
+                    "mode": "skip"
+                },
+
+                "[web-root]/.csslintrc": {
+                    "mode": "skip"
+                },
+                "[web-root]/.editorconfig": {
+                    "mode": "skip"
+                },
+                "[web-root]/.eslintignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/.eslintrc.json": {
+                    "mode": "skip"
+                },
+                "[web-root]/.gitattributes": {
+                    "mode": "skip"
+                },
+                "[web-root]/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/.ht.router.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/example.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/INSTALL.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/INSTALL.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/README.md": {
+                    "mode": "skip"
+                },
+                "[web-root]/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/.htaccess": {
+                    "mode": "skip"
+                },
+                "[web-root]/web.config": {
+                    "mode": "skip"
+                },
+                "[web-root]/robots.txt": {
+                    "append": "sites/all/assets/robots-additions.txt"
+                },
+                "[project-root]/.editorconfig": {
+                    "mode": "skip"
+                }
+            },
+            "initial": {
+                "sites/default/default.services.yml": "sites/default/services.yml",
+                "sites/default/default.settings.php": "sites/default/settings.php"
+            }
+        }
+    }
+}

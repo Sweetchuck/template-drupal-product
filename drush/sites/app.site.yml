@@ -1,0 +1,11 @@
+
+local:
+  root: '${drush.vendor-dir}/../docroot'
+
+#dev:
+#  uri: 'http://dev.example.com'
+#  user: ''
+#  host: ''
+#  root: ''
+#  paths:
+#    drush-script: ''

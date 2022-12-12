@@ -1,0 +1,28 @@
+
+default:
+  suites:
+    default:
+      contexts:
+        - '\Drupal\DrupalExtension\Context\MinkContext'
+        - '\Drupal\DrupalExtension\Context\DrupalContext'
+        - '\NuvoleWeb\Drupal\DrupalExtension\Context\DrupalContext'
+        - '\NuvoleWeb\Drupal\DrupalExtension\Context\VisibilityContext'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Ckeditor'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Datetime'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Dialog'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Entity'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\EntitySetupTearDown'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Form'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\FormCheckboxes'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Link'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Media'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Menu'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Message'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\Tabs'
+        - '\Sweetchuck\DrupalTestTraits\Core\Behat\Context\User'
+        - '\Sweetchuck\TemplateDrupalProduct\Tests\Behat\Context\ExternalTranslations'
+        - '\Sweetchuck\TemplateDrupalProduct\Tests\Behat\Context\Browser'
+      paths:
+        features: '%paths.base%/tests/behat/features'
+      filters:
+        tags: '~@knownBug'

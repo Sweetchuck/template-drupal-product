@@ -1,0 +1,5 @@
+##
+# Copy this file as "drush.host.yml".
+##
+options:
+  uri: 'http://example.localhost'

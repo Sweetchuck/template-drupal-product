@@ -1,0 +1,23 @@
+
+drush:
+  paths:
+    config:
+      - '${drush.vendor-dir}/../drush/drush.app.yml'
+      - '${drush.vendor-dir}/../drush/drush.local.yml'
+    include:
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_behat'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_behat_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_composer'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_composer_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_git'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_git_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpcs'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpcs_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phplint'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phplint_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpstan'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpstan_product'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpunit'
+      - '${drush.vendor-dir}/../drush/Commands/contrib/marvin_phpunit_product'
