@@ -41,6 +41,10 @@
             "type": "github",
             "url": "https://github.com/albeorte96/drupal-behat.git"
         },
+        "sweetchuck/drupal-drush-helper": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-drush-helper.git"
+        },
         "drupal/marvin": {
             "type": "github",
             "url": "https://github.com/Sweetchuck/drupal-marvin.git"
