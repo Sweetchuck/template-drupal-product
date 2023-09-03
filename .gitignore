@@ -2,14 +2,20 @@
 /reports/
 
 
-## Composer.
+## Common places for all tooling.
+/.cache/
+
+
+## Composer - third-party packages.
 /vendor/
 /docroot/core/
 /docroot/libraries/
 /docroot/modules/contrib/
 /docroot/profiles/contrib/
 /docroot/themes/contrib/
+/drush/Commands/contrib/
 
+## Composer - archive artifacts.
 /sweetchuck-template-drupal-product-*.tar
 /sweetchuck-template-drupal-product-*.tar.gz
 /sweetchuck-template-drupal-product-*.tar.bz2
@@ -47,7 +53,6 @@
 
 
 ## drush/drush.
-/drush/Commands/contrib/
 /drush/drush.local.yml
 
 

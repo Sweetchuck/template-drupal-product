@@ -41,6 +41,10 @@
             "type": "github",
             "url": "https://github.com/albeorte96/drupal-behat.git"
         },
+        "sweetchuck/drupal-drush-helper": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-drush-helper.git"
+        },
         "drupal/marvin": {
             "type": "github",
             "url": "https://github.com/Sweetchuck/drupal-marvin.git"
@@ -126,7 +130,9 @@
     "require-dev": {
         "behat/mink": "^1.0",
         "consolidation/robo": "^4.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "dmore/behat-chrome-extension": "^1.0",
+        "drupal/coder": "^8.3",
         "drupal/devel": "^5.1",
         "drupal/marvin": "3.x-dev",
         "drupal/marvin_behat": "2.x-dev",
