@@ -41,6 +41,8 @@ sql:
       - 'watchdog'
 
 marvin:
+  projectType: 'product'
+
   sites:
     default:
       uris:
@@ -100,6 +102,43 @@ marvin:
         app_default: true
         app_common: true
         app_dummy: true
+
+  lint:
+    reporterConfig:
+      verbose:
+        ##
+        # See keys in \Sweetchuck\LintReport\Reporter\BaseReporter::$services array.
+        #
+        # @var string
+        ##
+        service: 'lintVerboseReporter'
+
+        ##
+        # For keys see \Sweetchuck\LintReport\Reporter\VerboseReporter::setOptions().
+        #
+        # @var array
+        ##
+        options:
+          showSeverity: true
+          showSource: true
+          showLineNumber: true
+          showColumnNumber: true
+          showMessage: true
+
+    reporterCombination:
+      default:
+        verbose: true
+
+  phpcs:
+    defaultPreset: 'default'
+    preset:
+      ##
+      # For keys see \Sweetchuck\Robo\Phpcs\Task\PhpcsLint::setOptions().
+      #
+      # @var array
+      ##
+      default:
+        failOn: 'warning'
 
   phpunit:
     testSuite:
