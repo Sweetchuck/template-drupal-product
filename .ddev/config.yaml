@@ -5,21 +5,21 @@
 # If you prefer you can change this to "ddev.local" to preserve
 # pre-v1.9 behavior.
 #project_tld: ddev.site
-project_tld: 'ddev'
+project_tld: 'ddev.site'
 
 # Name of the project, automatically provides
-# http://template-drupal-product-10.sweetchuck.ddev and https://template-drupal-product-10.sweetchuck.ddev
-name: 'template-drupal-product-10.sweetchuck'
+# http://template-drupal-product-11.sweetchuck.ddev.site and https://template-drupal-product-11.sweetchuck.ddev.site
+name: 'template-drupal-product-11.sweetchuck'
 
 # drupal6/7/8, backdrop, typo3, wordpress, php
-type: 'drupal10'
+type: 'drupal11'
 
 database:
-  type: 'mysql'
-  version: '5.7'
+  type: 'mariadb'
+  version: '11.4'
 
 # PHP version to use, "5.6", "7.0", "7.1", "7.2", "7.3", "7.4" "8.0", "8.1", "8.2".
-php_version: '8.2'
+php_version: '8.3'
 
 # if composer_version:"" it will use the current ddev default composer release.
 # It can also be set to "1", to get most recent composer v1
@@ -28,7 +28,7 @@ php_version: '8.2'
 # After first project 'ddev start' this will not be updated until it changes
 composer_version: '2'
 
-nodejs_version: '18'
+nodejs_version: '22'
 
 # webserver_type: nginx-fpm  # or apache-fpm
 webserver_type: 'nginx-fpm'
@@ -138,9 +138,9 @@ nfs_mount_enabled: false
 #  - 'php7.3-tidy'
 #  - 'php-bcmath'
 webimage_extra_packages:
-  - 'php8.2-imagick'
-  - 'php8.2-pcov'
-  - 'php8.2-yaml'
+  - 'php8.3-imagick'
+  - 'php8.3-pcov'
+  - 'php8.3-yaml'
   - 'zsh'
   - 'fzf'
   - 'build-essential'

@@ -3,8 +3,14 @@
 declare(strict_types = 1);
 
 use Consolidation\AnnotatedCommand\AnnotationData;
+use Consolidation\AnnotatedCommand\Attributes\Command;
+use Consolidation\AnnotatedCommand\Attributes\Help;
+use Consolidation\AnnotatedCommand\Attributes\Hook;
+use Consolidation\AnnotatedCommand\Attributes\Option;
+use Consolidation\AnnotatedCommand\Hooks\HookManager;
 use NuvoleWeb\Robo\Task\Config\Robo\loadTasks as ConfigLoader;
 use Robo\Collection\CollectionBuilder;
+use Robo\Contract\TaskInterface;
 use Robo\State\Data as RoboState;
 use Robo\Tasks;
 use Symfony\Component\Console\Input\InputInterface;
@@ -30,10 +36,12 @@ class RoboFile extends Tasks {
   }
 
   /**
-   * @param \Consolidation\AnnotatedCommand\AnnotationData<string, mixed> $annotationData
-   *
-   * @hook interact instance:create
+   * @phpstan-param \Consolidation\AnnotatedCommand\AnnotationData<string, mixed> $annotationData
    */
+  #[Hook(
+    type: HookManager::INTERACT,
+    selector: 'instance:create',
+  )]
   public function cmdInstanceCreateInteract(
     InputInterface $input,
     OutputInterface $output,
@@ -70,15 +78,31 @@ class RoboFile extends Tasks {
   }
 
   /**
-   * @command instance:create
+   * @phpstan-param array<string, mixed> $options
    */
+  #[Command(name: 'instance:create')]
+  #[Help(
+    description: 'Creates a new instance.',
+  )]
+  #[Option(
+    name: 'project-vendor',
+    description: 'Project vendor machine-name.',
+  )]
+  #[Option(
+    name: 'project-name',
+    description: 'Project name machine-name.',
+  )]
+  #[Option(
+    name: 'dst-dir',
+    description: 'Destination directory for the new project.',
+  )]
   public function cmdInstanceCreateExecute(
     array $options = [
       'project-vendor' => '',
       'project-name' => '',
       'dst-dir' => '',
     ],
-  ): CollectionBuilder {
+  ): TaskInterface {
     $options['composer'] = preg_replace(
       '@^\./@',
       '',

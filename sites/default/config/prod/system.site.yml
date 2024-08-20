@@ -2,7 +2,7 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 4b5f4b5b-bebb-4862-b0c2-3c3b8edabd1e
-name: '@todo'
+name: 'Drupal 11.x product template'
 mail: admin@example.com
 slogan: ''
 page:
