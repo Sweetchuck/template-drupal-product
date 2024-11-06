@@ -4,4 +4,4 @@ command:
       options:
         project-vendor: 'sweetchuck'
         project-name: 'deleteme'
-        host-uri-pattern: 'http://{{ project-name }}.{{ project-vendor }}.localhost'
+        host-uri-pattern: 'https://{{ project-name }}.{{ project-vendor }}.localhost'

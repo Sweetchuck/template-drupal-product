@@ -40,7 +40,7 @@ class RoboFile extends Tasks {
    */
   #[Hook(
     type: HookManager::INTERACT,
-    selector: 'instance:create',
+    target: 'instance:create',
   )]
   public function cmdInstanceCreateInteract(
     InputInterface $input,
