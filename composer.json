@@ -122,8 +122,8 @@
         "php": ">=8.2",
         "cweagans/composer-patches": "^2.0",
         "drupal/admin_toolbar": "^3.3",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/core-composer-scaffold": "~10.4",
+        "drupal/core-recommended": "~10.4",
         "drush/drush": "^12.0",
         "oomphinc/composer-installers-extender": "^2.0"
     },
