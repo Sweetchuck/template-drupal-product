@@ -3,5 +3,5 @@ command:
     create:
       options:
         project-vendor: 'sweetchuck'
-        project-name: 'deleteme'
+        project-name: 'deleteme-d1102product'
         host-uri-pattern: 'https://{{ project-name }}.{{ project-vendor }}.localhost'

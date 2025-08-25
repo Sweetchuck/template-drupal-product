@@ -29,6 +29,7 @@
 
 
 ## drupal/core - common.
+/recipes/
 /docroot/sites/sites.php
 /docroot/autoload.php
 /docroot/index.php

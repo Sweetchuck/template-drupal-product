@@ -754,7 +754,8 @@ $settings['container_yamls']['general'] = "$app_root/$site_path/services.yml";
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
 $settings['trusted_host_patterns'] = [
-  '^example\.com$',
+  '^127.0.0.1$',
+  '^localhost$',
 ];
 
 /**

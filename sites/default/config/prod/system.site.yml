@@ -1,8 +1,8 @@
 _core:
-  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
-uuid: 4b5f4b5b-bebb-4862-b0c2-3c3b8edabd1e
-name: 'Drupal 11.x product template'
+uuid: 5f3ab42c-423f-4cde-b2b4-1746cc920f11
+name: '@todo'
 mail: admin@example.com
 slogan: ''
 page:
@@ -12,3 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
+mail_notification: null

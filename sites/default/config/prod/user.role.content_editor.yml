@@ -1,19 +1,16 @@
-uuid: c991e8e0-d7f8-44c6-9bf1-372a8aa279bd
+uuid: bb71b213-f3e6-4010-91e1-14660270ccab
 langcode: en
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.tags
   module:
     - contextual
     - file
     - node
     - path
     - system
-    - taxonomy
     - toolbar
 _core:
-  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
 id: content_editor
 label: 'Content editor'
 weight: 2
@@ -25,9 +22,8 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
-  - 'create terms in tags'
   - 'create url aliases'
-  - 'edit terms in tags'
+  - 'delete own files'
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'

@@ -1,20 +1,22 @@
-uuid: 0958ae5d-37a0-44da-b42c-8093aa5c49e4
+uuid: 23048ce7-ee66-4647-8832-bb10c154aa6b
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
   module:
+    - file
     - filter
-    - media
+    - search
     - system
 _core:
-  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
 label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'delete own files'
+  - 'search content'
   - 'use text format basic_html'
-  - 'view media'
