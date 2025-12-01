@@ -11,7 +11,7 @@
     <ini name="memory_limit" value="-1"/>
     <ini name="error_reporting" value="32767"/>
 
-    <!--<env name="DTT_BASE_URL" value="https://template-drupal-product-10.sweetchuck.ddev" />-->
+    <!--<env name="DTT_BASE_URL" value="https://template-drupal-product-11.sweetchuck.ddev" />-->
     <!--<env name="DTT_API_URL" value="http://chrome:9222" />-->
     <env name="DTT_SCREENSHOT_REPORT_DIRECTORY" value="../reports/human/functional-javascript" />
 
@@ -19,7 +19,7 @@
     <!--<env name="SIMPLETEST_DB" value="mysql://root:root@db:3306/app__default" />-->
 
     <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="./reports/human/browser_output" />
-    <!--<env name="BROWSERTEST_OUTPUT_BASE_URL" value="https://template-drupal-product-10.sweetchuck.ddev" />-->
+    <!--<env name="BROWSERTEST_OUTPUT_BASE_URL" value="https://template-drupal-product-11.sweetchuck.ddev" />-->
 
     <env name="SYMFONY_DEPRECATIONS_HELPER" value="/Drupal\\app(p|b|f|_.+?)\\/" />
 
@@ -29,10 +29,15 @@
     <!--<env name="MINK_DRIVER_ARGS_WEBDRIVER" value='["firefox", null, "http://chrome:4444/wd/hub"]'/>-->
   </php>
 
-  <!--<listeners>-->
-  <!--  <listener class="\Drupal\Tests\Listeners\DrupalListener"/>-->
-  <!--  <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>-->
-  <!--</listeners>-->
+  <source>
+    <include>
+      <directory>./docroot/profiles/custom/</directory>
+      <directory>./docroot/modules/custom/</directory>
+      <directory>./docroot/themes/custom/</directory>
+      <directory>./drush/Commands/custom/</directory>
+      <directory>./tests/src/</directory>
+    </include>
+  </source>
 
   <testsuites>
     <testsuite name="unit">
@@ -44,31 +49,20 @@
   </testsuites>
 
   <logging>
-    <testdoxHtml outputFile="reports/human/junit/phpunit.html"/>
-    <junit outputFile="reports/machine/junit/phpunit.xml"/>
+    <testdoxHtml outputFile="./reports/human/result/testdox.html" />
+    <testdoxText outputFile="./reports/human/result/testdox.txt" />
+
+    <junit outputFile="./reports/machine/result/junit.xml" />
   </logging>
 
-  <coverage processUncoveredFiles="true">
-    <include>
-      <directory>./docroot/profiles/custom/</directory>
-      <directory>./docroot/modules/custom/</directory>
-      <directory>./docroot/themes/custom/</directory>
-      <directory>./drush/Commands/custom/</directory>
-    </include>
-
-    <exclude>
-      <directory>./docroot/profiles/custom/*/tests/</directory>
-      <directory>./docroot/profiles/custom/*/node_modules/</directory>
-      <directory>./docroot/modules/custom/*/tests/</directory>
-      <directory>./docroot/modules/custom/*/node_modules/</directory>
-      <directory>./docroot/themes/custom/*/tests/</directory>
-      <directory>./docroot/themes/custom/*/node_modules/</directory>
-    </exclude>
-
+  <coverage>
     <report>
-      <clover outputFile="reports/machine/coverage/phpunit.xml"/>
-      <html outputDirectory="reports/human/coverage/html"/>
       <text outputFile="php://stdout"/>
+      <html outputDirectory="./reports/human/coverage/html/" />
+
+      <xml outputDirectory="./reports/machine/coverage/xml" />
+      <clover outputFile="./reports/machine/coverage/clover.xml" />
+      <php outputFile="./reports/machine/coverage/php.php" />
     </report>
   </coverage>
 </phpunit>

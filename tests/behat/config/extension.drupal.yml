@@ -10,6 +10,8 @@ default:
       api_driver: 'drupal'
       services: './tests/behat/services.yml'
       text:
+        log_in: 'Log in'
+        log_out: 'Log out'
         username_field: 'name'
         password_field: 'pass'
       selectors:

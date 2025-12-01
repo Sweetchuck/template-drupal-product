@@ -1,0 +1,7 @@
+parameters:
+	paths:
+		- ../docroot/modules/custom/
+		- ../docroot/themes/custom/
+		- ../docroot/profiles/custom/
+		- ../drush/Commands/custom/
+		- ../tests/src/

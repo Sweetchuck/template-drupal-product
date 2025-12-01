@@ -30,14 +30,15 @@
 
   <rule ref="DrupalPractice"/>
 
+  <exclude-pattern>./.bundle/</exclude-pattern>
+  <exclude-pattern>.//node_modules/</exclude-pattern>
+
   <file>./docroot/profiles/custom/</file>
-
   <file>./docroot/modules/custom/</file>
-
-  <file>./docroot/themes/custom/</file>
+  <!--<file>./docroot/themes/custom/</file>-->
   <exclude-pattern>./docroot/themes/custom/*/.bundle/</exclude-pattern>
   <exclude-pattern>./docroot/themes/custom/*/node_modules/</exclude-pattern>
 
   <file>./drush/Commands/custom/</file>
-
+  <file>./tests/src/</file>
 </ruleset>

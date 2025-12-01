@@ -2,7 +2,11 @@
 /reports/
 
 
-## Common places for all tooling.
+## Common place for all tooling.
+/artifacts/
+
+
+## Common place for all tooling.
 /.cache/
 
 

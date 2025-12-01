@@ -5,13 +5,16 @@ imports:
   #- './tests/behat/config/extension.screenshot.yml'
   - './tests/behat/config/formatters.junit.yml'
   - './tests/behat/config/formatters.pretty.yml'
-  - './tests/behat/config/suite.default.yml'
+  - './tests/behat/config/formatters.tap.yml'
+  - './tests/behat/config/suites.yml'
   - './behat.local.yml'
 
 default:
+  autoload:
+    bootstrap: '%paths.base%/features/bootstrap'
   testers:
     strict: true
-    rerun_cache: '%paths.base%/tmp/behat_rerun_cache'
+    rerun_cache: '%paths.base%/.cache/behat/rerun'
 
   exceptions:
     verbosity: 4

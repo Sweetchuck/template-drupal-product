@@ -1,4 +1,3 @@
-
 options:
   root: '${drush.vendor-dir}/../docroot'
 
@@ -43,104 +42,22 @@ sql:
 marvin:
   projectType: 'product'
 
-  sites:
-    default:
-      uris:
-        primary: '${options.uri}'
-
   runtime_environments:
     host:
       enabled: true
-
-  environments:
-    local:
-      modules:
-        app_dc: true
-        dblog: true
-        devel: true
-        field_ui: true
-        kint: false
-        menu_ui: true
-        migrate_tools: true
-        module_filter: true
-        views_ui: true
-
-    prod:
-      modules:
-        app_dc: false
-        app_legacy: false
-        dblog: false
-        devel: false
-        field_ui: true
-        kint: false
-        memcache_admin: false
-        migrate: false
-        migrate_drupal: false
-        migrate_plus: false
-        migrate_tools: false
-        module_filter: false
-        simpletest: false
-        views_ui: false
-
-  migrate:
-    legacy:
-      module:
-        app_dc: true
-      group:
-        app_legacy: true
-        app_common: true
-    default:
-      module:
-        app_dc: true
-      group:
-        app_default: true
-        app_common: true
-    dummy:
-      module:
-        app_dc: true
-      group:
-        app_default: true
-        app_common: true
-        app_dummy: true
-
-  lint:
-    reporterConfig:
-      verbose:
-        ##
-        # See keys in \Sweetchuck\LintReport\Reporter\BaseReporter::$services array.
-        #
-        # @var string
-        ##
-        service: 'lintVerboseReporter'
-
-        ##
-        # For keys see \Sweetchuck\LintReport\Reporter\VerboseReporter::setOptions().
-        #
-        # @var array
-        ##
-        options:
-          showSeverity: true
-          showSource: true
-          showLineNumber: true
-          showColumnNumber: true
-          showMessage: true
-
-    reporterCombination:
-      default:
-        verbose: true
-
-  phpcs:
-    defaultPreset: 'default'
-    preset:
-      ##
-      # For keys see \Sweetchuck\Robo\Phpcs\Task\PhpcsLint::setOptions().
-      #
-      # @var array
-      ##
-      default:
-        failOn: 'warning'
 
   phpunit:
     testSuite:
       default:
         unit: true
+
+  sites:
+    default:
+      #id: 'default'
+      #enabled: true
+      #defaultUri: 'default'
+      uriList:
+        default:
+          uri: 'https://template-drupal-product-11.sweetchuck.localhost:1443'
+          #languages:
+          #  en: -999

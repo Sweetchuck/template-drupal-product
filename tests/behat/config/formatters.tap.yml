@@ -1,0 +1,7 @@
+default:
+  extensions:
+    Sweetchuck\BehatTapFormatter\TapFormatterExtension: ~
+  formatters:
+    tap:
+      show_trace: false
+      trace_depth: 3

@@ -1,0 +1,8 @@
+/docroot/sites/*/files/
+/docroot/sites/simpletest/
+/sites/*/backup/
+/sites/*/certs/private/
+/sites/*/php_storage/
+/sites/*/private/
+/sites/*/temporary/
+/sites/*/hash_salt.txt
