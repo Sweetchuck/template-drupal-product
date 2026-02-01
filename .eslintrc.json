@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:yaml/recommended"
+  ],
+  "plugins": [
+    "yaml"
+  ],
+  "parser": "",
+  "ignorePatterns": [],
+  "rules": {}
+}

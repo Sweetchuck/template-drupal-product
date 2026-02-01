@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "description": "A simple application",
+  "private": "true",
+  "license": "proprietary",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "gulp": "^5.0.1",
+    "stylelint": "^16.26.1"
+  },
+  "scripts": {
+    "ping": "echo 'pong'"
+  }
+}
