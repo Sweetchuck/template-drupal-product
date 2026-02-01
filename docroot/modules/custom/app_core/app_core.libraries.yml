@@ -1,0 +1,6 @@
+deleteme-01:
+  css:
+    layout:
+      layout.css: {  }
+  js:
+    index.js: {  }

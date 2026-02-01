@@ -24,7 +24,7 @@ test -x "${drush}" \
 || sghExit 0 'drush executable not found'
 
 "${drush}" help "marvin:git-hook:${sghHookName}" 1> /dev/null 2>&1 \
-|| sghExit 0 'drush command does not exist.'
+|| sghExit 0 "Command does not exist: drush marvin:git-hook:${sghHookName}"
 
 if [ "${sghHasInput}" = 'true' ]; then
 	"${drush}" "marvin:git-hook:${sghHookName}" "${@}" <&0 || sghExit $?

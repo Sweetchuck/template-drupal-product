@@ -22,7 +22,7 @@ command:
     install:
       options:
         sites-subdir: 'default'
-        site-name: '@todo'
+        site-name: 'Drupal-11.3 product template'
         account-name: 'admin'
         account-pass: 'admin'
         account-mail: 'admin@todo.localhost'
@@ -58,6 +58,6 @@ marvin:
       #defaultUri: 'default'
       uriList:
         default:
-          uri: 'https://template-drupal-product-11.sweetchuck.localhost:1443'
+          uri: 'https://default'
           #languages:
           #  en: -999
